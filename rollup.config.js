@@ -16,12 +16,12 @@ export default [
     input: 'src/index.ts',
     output: [
       {
-        dir: 'dist/cjs',
+        dir: 'dist',
         format: 'cjs',
         sourcemap: false,
       },
       {
-        dir: 'dist/esm',
+        dir: 'es',
         format: 'esm',
         sourcemap: false,
       },

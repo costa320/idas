@@ -1,14 +1,13 @@
 {
   "name": "idas",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Inps Design AntD System",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "browser": "dist/umd/index.js",
-  "types": "dist/index.d.ts",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "index.d.ts",
   "scripts": {
     "prepublish": "rm -rf ./dist && npm run rollup",
-    "rollup": "rollup -c --bundleConfigAsCjs",
+    "rollup": "grunt bump:patch && grunt clean:dist && rollup -c --bundleConfigAsCjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,6 +29,10 @@
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.2.55",
+    "grunt": "^1.6.1",
+    "grunt-bump": "^0.8.0",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-copy": "^1.0.0",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

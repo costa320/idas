@@ -2,7 +2,7 @@
 
 import { Space, Typography } from 'antd';
 import * as styles from './MessageList.module.scss';
-import { MessageListItemProps, MessageListProps } from './MessageList.types';
+import { MessageListItemProps, MessageListProps } from './index';
 
 const MessageList = ({ items }: MessageListProps) => {
   return (
