@@ -1,12 +1,12 @@
 /** @format */
-
 import { Space, Typography } from 'antd';
-import * as styles from './MessageList.module.scss';
+import React from 'react';
+import './MessageList.module.scss';
 import { MessageListItemProps, MessageListProps } from './index';
 
 const MessageList = ({ items }: MessageListProps) => {
   return (
-    <div className={styles.MessageListContainer}>
+    <div className={'MessageListContainer'}>
       {items && items.length > 0 && (
         <>
           {items.map((item: MessageListItemProps) => {
