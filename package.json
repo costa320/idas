@@ -2,10 +2,12 @@
   "name": "idas",
   "version": "0.0.1",
   "description": "Inps Design AntD System",
-  "main": "dist/cjs",
-  "module": "dist/esm",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "browser": "dist/umd/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "prepublish": "rm -rf ./dist && npm run rollup",
     "rollup": "rollup -c --bundleConfigAsCjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,6 +32,7 @@
     "@types/react": "^18.2.55",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rollup": "^4.12.0",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -40,5 +43,9 @@
   },
   "dependencies": {
     "antd": "^5.14.1"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

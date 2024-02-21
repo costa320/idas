@@ -16,15 +16,20 @@ export default [
     input: 'src/index.ts',
     output: [
       {
-        dir: packageJson.main,
+        dir: 'dist/cjs',
         format: 'cjs',
         sourcemap: false,
       },
       {
-        dir: packageJson.module,
+        dir: 'dist/esm',
         format: 'esm',
         sourcemap: false,
       },
+      /* CANT USE IT WITH BUNDLE SPLITTING {
+        dir: 'dist/umd',
+        format: 'umd',
+        sourcemap: false,
+      }, */
     ],
     plugins: [
       commonjs(),
