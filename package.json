@@ -2,10 +2,11 @@
   "name": "idas",
   "version": "0.0.1",
   "description": "Inps Design System for React with AntD",
-  "main": "build/index.js",
-  "module": "build/index.es.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
   "files": [
-    "build"
+    "dist",
+    "es"
   ],
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
